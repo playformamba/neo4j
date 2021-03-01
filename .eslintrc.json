@@ -1,0 +1,78 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["plugin:react/recommended", "prettier"],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-case-declarations": "off",
+    "no-prototype-builtins": "off",
+    "prefer-const": "warn",
+    "no-async-promise-executor": "off",
+    "react/jsx-handler-names": "off",
+    "react/jsx-fragments": "off",
+    "react/prop-types": "off",
+    "react/jsx-no-target-blank": "off",
+    "react/jsx-indent": "off",
+    "react/no-deprecated": "warn",
+    "react/display-name": "warn",
+    "react/no-unescaped-entities": "off",
+    "import/no-webpack-loader-syntax": "off"
+  },
+  "globals": {
+    "it": true,
+    "describe": true,
+    "test": true,
+    "jest": true,
+    "expect": true,
+    "beforeAll": true,
+    "afterAll": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "neo": true,
+    "FileReader": true,
+    "Blob": true,
+    "fetch": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "overrides": [
+    {
+      "parser": "@typescript-eslint/parser",
+      "files": ["*.ts", "**/*.ts", "**/*.tsx"],
+      "extends": [
+        "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+        "prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+        "plugin:react/recommended", // Uses the recommended rules from @eslint-plugin-react
+        "prettier/react", // disables react-specific linting rules that conflict with prettier
+        "plugin:react-hooks/recommended" // https://reactjs.org/docs/hooks-rules.html
+      ],
+      "plugins": [
+        "@typescript-eslint/eslint-plugin",
+        "@typescript-eslint",
+        "react"
+      ],
+      "rules": {
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/ban-types": "off",
+        "react/prop-types": "off",
+        "prefer-spread": "off",
+        "react/no-unescaped-entities": "off",
+        "no-var": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "react-hooks/exhaustive-deps": "off",
+        "@typescript-eslint/no-this-alias": "off",
+        "prefer-rest-params": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "react-hooks/rules-of-hooks": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-explicit-any": "off", // remove this when migrated fully to ts. right now it makes warnings unreadable
+        "@typescript-eslint/ban-ts-comment": "off" // remove this when typings for react-spring allow multiple animation stages
+      }
+    }
+  ]
+}
